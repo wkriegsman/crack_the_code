@@ -15,5 +15,7 @@ MVP Pitch
 
 A minimum viable product will allow the user to begin play and the program will generate a random code of colors in a sequence of four. The user will be able to choose colors and place them in a specific order. The user will be able to take their turn and get feedback as to how close they were to the code by seeing a readout of how many correct colors they chose and how many were in the correct sequence. The user will have ten chances to use logic and memory along with the feedback of each turn to match the code. If the user guesses the correct code a message should appear acknowledging the completion of the game and the play button should allow the game to reset. 
 
+Stretch Goals
 
+I would like to add text responses after each turn urges the user on. I would also like to add some sort of animation in the form of the colors blinking - maybe when a turn is taken and definately when the user wins the game. 
 
