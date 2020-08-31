@@ -9,4 +9,4 @@ The player guesses the the possible code by first selecting a color from the gri
 
 The user will have ten chances to correctly guess the code. 
 
-(/home/bill/Documents/IMG_3092.JPG)
+(https://github.com/wkriegsman/crack_the_code/blob/master/IMG_3092.JPG)
