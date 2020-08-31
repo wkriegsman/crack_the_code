@@ -9,4 +9,4 @@ The player guesses the the possible code by first selecting a color from the gri
 
 The user will have ten chances to correctly guess the code. 
 
-/home/bill/Documents/IMG_3092.JPG
+(/home/bill/Documents/IMG_3092.JPG)
