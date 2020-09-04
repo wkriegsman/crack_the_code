@@ -110,7 +110,10 @@ body {
     padding:5px;
     align-items: right;
 }
+.buttons {
 
+    grid-area: aside;
+}
 .buttons button {
     grid-area: aside;
     display: block;
