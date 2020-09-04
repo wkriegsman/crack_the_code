@@ -12,11 +12,11 @@ body {
     width: 100%;
     display: grid;
     grid-template-areas: 
-    "header header header header"
-    ". alerts alerts alerts"
-    "aside main main main"
-    ". footer footer footer";
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    "header header header"
+    ". alerts alerts"
+    "aside main ."
+    ". footer .";
+    grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
     justify-content: center;
     position: relative; 
@@ -27,7 +27,7 @@ body {
 
 .header  {
     grid-area: header;
-    grid-column: 2 / span 2;
+    grid-column: 2;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -41,8 +41,75 @@ body {
 
 .gameboard {
     grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
+#pg1 {
+    border-style: solid;
+    border-color: white;
+    border-width:1px;
+    box-sizing: border-box;
+    width: 50px;
+    height: 50px;
+    margin:5px;
+    padding:5px;
+}
+
+#pg2 {
+    border-style: solid;
+    border-color: white;
+    border-width:1px;
+    box-sizing: border-box;
+    width: 50px;
+    height: 50px;
+    margin:5px;
+    padding:5px;
+}
+
+#pg3 {
+    border-style: solid;
+    border-color: white;
+    border-width:1px;
+    box-sizing: border-box;
+    width: 50px;
+    height: 50px;
+    margin:5px;
+    padding:5px;
+}
+#pg4 {
+    border-style: solid;
+    border-color: white;
+    border-width:1px;
+    box-sizing: border-box;
+    width: 50px;
+    height: 50px;
+    margin:5px;
+    padding:5px;
+}
+
+#pg5 {
+    border-style: solid;
+    border-color: white;
+    border-width:1px;
+    box-sizing: border-box;
+    width: 50px;
+    height: 50px;
+    margin:5px;
+    padding:5px;
+}
+
+#pg6 {
+    border-style: solid;
+    border-color: white;
+    border-width:1px;
+    box-sizing: border-box;
+    width: 50px;
+    height: 50px;
+    margin:5px;
+    padding:5px;
+    align-items: right;
+}
 .buttons button {
     grid-area: aside;
     display: block;
@@ -54,12 +121,19 @@ body {
     font-size: 20px; 
     padding: 20px 30px;
     margin: 20px;
-    width: 225px;
+    width: 40%;
     border-radius: 25px;
+    
+}
+
+.buttons botton:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
 .pegchoice {
     grid-area: footer;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
 
