@@ -7,17 +7,19 @@ sayHello("Bill");
 const colors = ["purple", "blue", "red", "green", "yellow", "white"]
 
 generateCode = function() {
-    const len =  currentLevel.colors.length,
-        secret = [],
-        i;
+    const len =  colors.length;
+        const secret = [];   
 
-    for (i = 0; i < colors.length; i++) {
-      secret[i] = currentLevel.colors[ Math.floor(Math.random() * len) ];
+    for (i = 0; i <= 3; i++) {
+      secret.push(colors[Math.floor(Math.random() * len)]);
     }
 
-    return secret;
+    console.log(secret);
   }
   
+
+  const checkCode = function() {
+
   for (i = 0; i < colors.length; i++){
       if (pg1 === secret[0]){
           return pin1
@@ -57,7 +59,11 @@ for (i = 0; i < colors.length; i++){
         
     }
 }
+}
 
+const checkWinner = function(){
+
+}
 
 
 
