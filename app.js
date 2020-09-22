@@ -23,8 +23,32 @@ document.getElementById('start').addEventListener('click', function() {
     generateCode();
   })
 
+const chooseColor = () => {
+    for (let i = 0; i < colors.length; i++) {
 
-  
+    }
+};
+
+document.getElementById('pg1').addEventListener('click', function() {
+    console.log('click');
+    chooseColor();
+  })
+
+  document.getElementById('pg2').addEventListener('click', function() {
+    console.log('click');
+    chooseColor();
+  })  
+
+  document.getElementById('pg3').addEventListener('click', function() {
+    console.log('click');
+    chooseColor();
+  })
+
+  document.getElementById('pg4').addEventListener('click', function() {
+    console.log('click');
+    chooseColor();
+  })
+
 const checkCode = function() {//returns the response of userGuess
 //get secret array
 //get the user's guess (create var userGuess[])
