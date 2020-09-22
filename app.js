@@ -5,11 +5,11 @@ function sayHello(name){
 sayHello("Bill");
 
 const colors = ["purple", "blue", "red", "green", "yellow", "white"]
+const secret = [];
 
 generateCode = function() {
     const len =  colors.length;
-        const secret = [];   
-
+           
     for (i = 0; i <= 3; i++) {
       secret.push(colors[Math.floor(Math.random() * len)]);
     }
@@ -18,9 +18,18 @@ generateCode = function() {
   }
   
 
-  const checkCode = function() {
+  
+  const checkCode = function() {//returns the response of userGuess
+//get secret array
+//get the user's guess (create var userGuess[])
+//check secret[0] against userGuess[0] - if statement with a return of pin1
+//then an else if with a for loop that checks secret[i] === userGuess[0]
+//else return pin3 (and empty pin)
 
-  for (i = 0; i < colors.length; i++){
+//next this in a loop that runs through userGuess
+
+
+  for (i = 0; i < secret.length; i++){
       if (pg1 === secret[0]){
           return pin1
       }else{(pg1 === secret[i]);{
@@ -62,7 +71,10 @@ for (i = 0; i < colors.length; i++){
 }
 
 const checkWinner = function(){
-
+//compare userGuess against secret
+//if they are equal declare winner
+//else generate a new line (and ideally make the old line unclickable)
+//
 }
 
 

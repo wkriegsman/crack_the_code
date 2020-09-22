@@ -17,12 +17,14 @@ body {
     "aside main ."
     ". footer footer";
     grid-template-columns: 1fr 1fr 1fr;
-    align-items: center;
+    grid-template-rows: 10% 5% 65% 20%;
+    /* align-items: center; */
     justify-content: center;
     position: relative; 
     margin: 0;
     font-family: helvetica, sans-serif;
     color: white;  
+
   }
 
 .header  {
@@ -42,7 +44,8 @@ body {
 .gameboard {
     grid-area: main;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    align-items: flex-end;
 }
 
 #pg1 {
@@ -89,9 +92,7 @@ body {
 }
 
 #pg5 {
-    border-style: solid;
-    border-color: white;
-    border-width:1px;
+    
     box-sizing: border-box;
     width: 50px;
     height: 50px;
@@ -138,6 +139,7 @@ body {
     grid-area: footer;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    align-items: center;
 }
 #pg11 {
     box-sizing: border-box;
