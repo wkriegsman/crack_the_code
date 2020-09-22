@@ -23,31 +23,45 @@ document.getElementById('start').addEventListener('click', function() {
     generateCode();
   })
 
-const chooseColor = () => {
-    for (let i = 0; i < colors.length; i++) {
+let selectColor;
 
-    }
-};
+ const pegChoice = document.getElementById("color-container");
+ pegChoice.addEventListener("click", (e) => {
+    selectColor = e.target.id; 
+    console.log(selectColor)
+      
+ })
+     
 
-document.getElementById('pg1').addEventListener('click', function() {
-    console.log('click');
-    chooseColor();
-  })
+ const gameBoard = document.getElementById("gameboard")
+ gameBoard.addEventListener("click", (e) => {
+     console.log(e.target.id);
+     $(`#${e.target.id}`).css("background-color", selectColor)
+ })
+ 
 
-  document.getElementById('pg2').addEventListener('click', function() {
-    console.log('click');
-    chooseColor();
-  })  
 
-  document.getElementById('pg3').addEventListener('click', function() {
-    console.log('click');
-    chooseColor();
-  })
 
-  document.getElementById('pg4').addEventListener('click', function() {
-    console.log('click');
-    chooseColor();
-  })
+
+// document.getElementById('pg1').addEventListener('click', function() {
+//     console.log('click');
+//     chooseColor();
+//   })
+
+//   document.getElementById('pg2').addEventListener('click', function() {
+//     console.log('click');
+//     chooseColor();
+//   })  
+
+//   document.getElementById('pg3').addEventListener('click', function() {
+//     console.log('click');
+//     chooseColor();
+//   })
+
+//   document.getElementById('pg4').addEventListener('click', function() {
+//     console.log('click');
+//     chooseColor();
+//   })
 
 const checkCode = function() {//returns the response of userGuess
 //get secret array
