@@ -44,8 +44,24 @@ body {
 .gameboard {
     grid-area: main;
     display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr; */
+    align-items: flex-end;
+}
+#peg-container {
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     align-items: flex-end;
+}
+
+#pg0 {
+    border-style: solid;
+    border-color: white;
+    border-width:1px;
+    box-sizing: border-box;
+    width: 50px;
+    height: 50px;
+    margin:1px;
+    padding:5px;
 }
 
 #pg1 {
@@ -69,18 +85,7 @@ body {
     margin:1px;
     padding:5px;
 }
-
 #pg3 {
-    border-style: solid;
-    border-color: white;
-    border-width:1px;
-    box-sizing: border-box;
-    width: 50px;
-    height: 50px;
-    margin:1px;
-    padding:5px;
-}
-#pg4 {
     border-style: solid;
     border-color: white;
     border-width:1px;

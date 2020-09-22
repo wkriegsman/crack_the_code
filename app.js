@@ -6,6 +6,7 @@ sayHello("Bill");
 
 const colors = ["purple", "blue", "red", "green", "yellow", "white"]
 const secret = [];
+const userGuess = [];
 
 generateCode = function() {
     const len =  colors.length;
@@ -33,35 +34,27 @@ let selectColor;
  })
      
 
- const gameBoard = document.getElementById("gameboard")
- gameBoard.addEventListener("click", (e) => {
-     console.log(e.target.id);
+ const pegContainer = document.getElementById("peg-container")
+ pegContainer.addEventListener("click", (e) => {
      $(`#${e.target.id}`).css("background-color", selectColor)
+     const idx = e.target.id.substr(2,3)
+     console.log(idx)
+     if (userGuess.length < 4){
+
+        userGuess.push({
+            color: selectColor,
+            indexPosition: idx          
+        })
+    
+    }else if (userGuess[idx].color !== selectColor) {
+        console.log("userGuess", userGuess[idx]) 
+        userGuess[idx].color = selectColor
+     }
+     console.log(userGuess)
+     
  })
  
-
-
-
-
-// document.getElementById('pg1').addEventListener('click', function() {
-//     console.log('click');
-//     chooseColor();
-//   })
-
-//   document.getElementById('pg2').addEventListener('click', function() {
-//     console.log('click');
-//     chooseColor();
-//   })  
-
-//   document.getElementById('pg3').addEventListener('click', function() {
-//     console.log('click');
-//     chooseColor();
-//   })
-
-//   document.getElementById('pg4').addEventListener('click', function() {
-//     console.log('click');
-//     chooseColor();
-//   })
+ 
 
 const checkCode = function() {//returns the response of userGuess
 //get secret array
@@ -74,7 +67,7 @@ const checkCode = function() {//returns the response of userGuess
 
 
   for (i = 0; i < secret.length; i++){
-      if (pg1 === secret[0]){
+      if (pg0 === secret[0]){
           return pin1
       }else{(pg1 === secret[i]);{
           return pin2
@@ -84,7 +77,7 @@ const checkCode = function() {//returns the response of userGuess
   }
 
   for (i = 0; i < colors.length; i++){
-    if (pg2 === secret[1]){
+    if (pg1 === secret[1]){
         return pin1
     }else{(pg1 === secret[i]);{
         return pin2
@@ -94,7 +87,7 @@ const checkCode = function() {//returns the response of userGuess
 }
 
 for (i = 0; i < colors.length; i++){
-    if (pg3 === secret[2]){
+    if (pg2 === secret[2]){
         return pin1
     }else{(pg1 === secret[i]);{
         return pin2
@@ -104,7 +97,7 @@ for (i = 0; i < colors.length; i++){
 }
 
 for (i = 0; i < colors.length; i++){
-    if (pg4 === secret[3]){
+    if (pg3 === secret[3]){
         return pin1
     }else{(pg1 === secret[i]);{
         return pin2
@@ -118,6 +111,8 @@ document.getElementById('check').addEventListener('click', function() {
     console.log('checked');
     checkCode();
   })
+
+
 
 const checkWinner = function(){
 //compare userGuess against secret
