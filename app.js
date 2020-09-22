@@ -18,8 +18,14 @@ generateCode = function() {
   }
   
 
+document.getElementById('start').addEventListener('click', function() {
+    console.log('clicked');
+    generateCode();
+  })
+
+
   
-  const checkCode = function() {//returns the response of userGuess
+const checkCode = function() {//returns the response of userGuess
 //get secret array
 //get the user's guess (create var userGuess[])
 //check secret[0] against userGuess[0] - if statement with a return of pin1
@@ -69,6 +75,11 @@ for (i = 0; i < colors.length; i++){
     }
 }
 }
+
+document.getElementById('check').addEventListener('click', function() {
+    console.log('checked');
+    checkCode();
+  })
 
 const checkWinner = function(){
 //compare userGuess against secret
