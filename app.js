@@ -57,7 +57,7 @@ let selectColor;
      
  })
  
- 
+let matches = [] 
 
 const checkCode = function() {
 //returns the response of userGuess
@@ -68,48 +68,63 @@ const checkCode = function() {
 //else return pin3 (and empty pin)
 
 //nest this in a loop that runs through userGuess
-
-    for (i = 0; i < secret.length; i++){
+let text = ""
+    for (let i = 0; i < secret.length; i++){
      if (userGuess[0].color === secret[0]){
         console.log("match at index 0")
-        // return "Match in 1st peg"
+        text = "Match in 1st box"
+        matches.push(text)
      }else if(userGuess[0].color === secret[i]){
         console.log("correct color at index 0")
-        // return "Correct color in 1st peg"
+        text = "Correct color in 1st box"
+        matches.push(text)
      } else {console.log("no match")}
     }
 
-    for (i = 0; i < secret.length; i++){
+    for (let i = 0; i < secret.length; i++){
         if (userGuess[1].color === secret[1]){
             console.log("match at index 1")
-            // return "Match in 2nd peg"
+            text = "Match in 2nd box"
+            matches.push(text)
         }else if(userGuess[1].color === secret[i]){
             console.log("correct color at index 1")
-            // return "Correct color in 2nd peg"
+            text = "Correct color in 2nd box"
+            matches.push(text)
         } else {console.log("no match")}
        }
 
     
-       for (i = 0; i < secret.length; i++){
+       for (let i = 0; i < secret.length; i++){
         if (userGuess[2].color === secret[2]){
             console.log("match at index 2")
-            // return "Match in 3rd peg"
+            text = "Match in 3rd box"
+            matches.push(text)
         }else if(userGuess[2].color === secret[i]){
             console.log("correct color at index 2")
-            // return "Correct color in 3rd peg"
+            text = "Correct color in 3rd box"
+            matches.push(text)
         } else {console.log("no match")}
        }
 
-       for (i = 0; i < secret.length; i++){
+       for (let i = 0; i < secret.length; i++){
         if (userGuess[3].color === secret[3]){
             console.log("match at index 3")
-            // return "Match in 4th peg" 
+            text = "Match in 4th box" 
+            matches.push(text)
         }else if(userGuess[3].color === secret[i]){
             console.log("correct color at index 3")
-            // return "Correct color in 4th peg"
+            text = "Correct color in 4th box"
+            matches.push(text)
         } else {console.log("no match")}
        }
-       document.getElementById("text-response").innerHTML = 'hi'
+       document.getElementById("text-response").innerHTML = matches
+    //    matches.forEach(match => {
+    //        $("#text-response").append(`<h6>${match}</h6>`)
+    //    })
+    for (let i = 0; i < 4; i++) {
+        $(`#pg${i}`).css("background-color", "")
+    }
+    matches = []
 }
 
 
@@ -119,7 +134,7 @@ const checkWinner = function(){
     //if they are equal declare winner
     //else generate a new line (and ideally make the old line unclickable)
     
-    for (i = 0; i < secret.length; i++){
+    for (let i = 0; i < secret.length; i++){
         if (userGuess[0].color === secret[0] 
             && userGuess[1].color === secret[1] 
             && userGuess[2].color === secret[2] 
