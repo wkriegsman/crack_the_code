@@ -140,9 +140,11 @@ const checkWinner = function(){
             && userGuess[2].color === secret[2] 
             && userGuess[3].color === secret[3])
         
-            console.log("You are a winner!")
-        
-    }document.getElementById("text-response").innerHTML = "You have won! You are a Mastermind!"
+            {console.log("You are a winner!")
+            
+            document.getElementById("text-response").innerHTML = "You have won! You are a Mastermind!"}
+    }
+    
     }
     
 
