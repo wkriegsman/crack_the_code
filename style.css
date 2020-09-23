@@ -13,11 +13,11 @@ body {
     display: grid;
     grid-template-areas: 
     "header header header"
-    ". alerts alerts"
+    ". alerts ."
     "aside main ."
     ". footer footer";
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 10% 5% 65% 20%;
+    grid-template-rows: 5% 15% 60% 20%;
     /* align-items: center; */
     justify-content: center;
     position: relative; 
@@ -30,7 +30,7 @@ body {
 .header  {
     grid-area: header;
     grid-column: 2;
-    align-items: center;
+    align-items: start;
     justify-content: center;
     text-align: center;
     
@@ -38,6 +38,10 @@ body {
 
 .text-response {
     grid-area: alerts;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 
 }
 

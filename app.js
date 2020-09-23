@@ -69,59 +69,50 @@ const checkCode = function() {
 
 //nest this in a loop that runs through userGuess
 
-    
-     
-//   for (let i = 0; i < secret.length; i++){
-//       if (userGuess[i].color === secret[i]){
-//         //   return pin1
-//         console.log("match in sequence")
-//       }else if(userGuess[i].color === secret[i]){
-//         //   return pin2
-//         console.log("color match")
-//       }
-        
-//       }
     for (i = 0; i < secret.length; i++){
      if (userGuess[0].color === secret[0]){
-        // return pin1
         console.log("match at index 0")
+        // return "Match in 1st peg"
      }else if(userGuess[0].color === secret[i]){
-        // return pin2
         console.log("correct color at index 0")
+        // return "Correct color in 1st peg"
      } else {console.log("no match")}
     }
 
     for (i = 0; i < secret.length; i++){
         if (userGuess[1].color === secret[1]){
-           // return pin1
-           console.log("match at index 1")
+            console.log("match at index 1")
+            // return "Match in 2nd peg"
         }else if(userGuess[1].color === secret[i]){
-           // return pin2
-           console.log("correct color at index 1")
+            console.log("correct color at index 1")
+            // return "Correct color in 2nd peg"
         } else {console.log("no match")}
        }
 
     
        for (i = 0; i < secret.length; i++){
         if (userGuess[2].color === secret[2]){
-           // return pin1
-           console.log("match at index 2")
+            console.log("match at index 2")
+            // return "Match in 3rd peg"
         }else if(userGuess[2].color === secret[i]){
-           // return pin2
-           console.log("correct color at index 2")
+            console.log("correct color at index 2")
+            // return "Correct color in 3rd peg"
         } else {console.log("no match")}
        }
 
        for (i = 0; i < secret.length; i++){
         if (userGuess[3].color === secret[3]){
-           // return pin1
-           console.log("match at index 3")
+            console.log("match at index 3")
+            // return "Match in 4th peg" 
         }else if(userGuess[3].color === secret[i]){
-           // return pin2
-           console.log("correct color at index 3")
+            console.log("correct color at index 3")
+            // return "Correct color in 4th peg"
         } else {console.log("no match")}
        }
+       document.getElementById("text-response").innerHTML = 'hi'
 }
+
+
 
 const checkWinner = function(){
     //compare userGuess against secret
