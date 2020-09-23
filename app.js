@@ -12,7 +12,15 @@ generateCode = function() {
 
     console.log(secret);
   }
-  
+
+howTo = function() {
+    alert("Click on Start Game to play. Select a color from the bottom row and then click on the desired box to place it in. When all the row is filled, click Check Code.")
+}  
+
+document.getElementById('howto').addEventListener('click',function() {
+    console.log("how-to");
+    howTo();
+})  
 
 document.getElementById('start').addEventListener('click', function() {
     console.log('clicked');
