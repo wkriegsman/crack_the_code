@@ -142,7 +142,7 @@ const checkWinner = function(){
         
             console.log("You are a winner!")
         
-    }
+    }document.getElementById("text-response").innerHTML = "You have won! You are a Mastermind!"
     }
     
 
