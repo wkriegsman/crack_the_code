@@ -115,23 +115,29 @@ const checkCode = function() {
        }
 }
 
+const checkWinner = function(){
+    //compare userGuess against secret
+    //if they are equal declare winner
+    //else generate a new line (and ideally make the old line unclickable)
+    
+    for (i = 0; i < secret.length; i++){
+        if (userGuess[0].color === secret[0] 
+            && userGuess[1].color === secret[1] 
+            && userGuess[2].color === secret[2] 
+            && userGuess[3].color === secret[3])
+        
+            console.log("You are a winner!")
+        
+    }
+    }
+    
+
+
 document.getElementById('check').addEventListener('click', function() {
     console.log('checked');
     checkCode();
+    checkWinner();
   })
-
-
-
-const checkWinner = function(){
-//compare userGuess against secret
-//if they are equal declare winner
-//else generate a new line (and ideally make the old line unclickable)
-//
-}
-
-
-
-
 
 
 
