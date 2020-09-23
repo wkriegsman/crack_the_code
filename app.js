@@ -1,8 +1,3 @@
-//sanity check
-function sayHello(name){
-    console.log(`Hello ${name}`)
-}
-sayHello("Bill");
 
 const colors = ["purple", "blue", "red", "green", "yellow", "white"]
 const secret = [];
@@ -56,55 +51,68 @@ let selectColor;
  
  
 
-const checkCode = function() {//returns the response of userGuess
+const checkCode = function() {
+//returns the response of userGuess
 //get secret array
 //get the user's guess (create var userGuess[])
 //check secret[0] against userGuess[0] - if statement with a return of pin1
 //then an else if with a for loop that checks secret[i] === userGuess[0]
 //else return pin3 (and empty pin)
 
-//next this in a loop that runs through userGuess
+//nest this in a loop that runs through userGuess
 
-
-  for (i = 0; i < secret.length; i++){
-      if (pg0 === secret[0]){
-          return pin1
-      }else{(pg1 === secret[i]);{
-          return pin2
-      }
-          
-      }
-  }
-
-  for (i = 0; i < colors.length; i++){
-    if (pg1 === secret[1]){
-        return pin1
-    }else{(pg1 === secret[i]);{
-        return pin2
-    }
+    
+     
+//   for (let i = 0; i < secret.length; i++){
+//       if (userGuess[i].color === secret[i]){
+//         //   return pin1
+//         console.log("match in sequence")
+//       }else if(userGuess[i].color === secret[i]){
+//         //   return pin2
+//         console.log("color match")
+//       }
         
+//       }
+    for (i = 0; i < secret.length; i++){
+     if (userGuess[0].color === secret[0]){
+        // return pin1
+        console.log("match at index 0")
+     }else if(userGuess[0].color === secret[i]){
+        // return pin2
+        console.log("correct color at index 0")
+     } else {console.log("no match")}
     }
-}
 
-for (i = 0; i < colors.length; i++){
-    if (pg2 === secret[2]){
-        return pin1
-    }else{(pg1 === secret[i]);{
-        return pin2
-    }
-        
-    }
-}
+    for (i = 0; i < secret.length; i++){
+        if (userGuess[1].color === secret[1]){
+           // return pin1
+           console.log("match at index 1")
+        }else if(userGuess[1].color === secret[i]){
+           // return pin2
+           console.log("correct color at index 1")
+        } else {console.log("no match")}
+       }
 
-for (i = 0; i < colors.length; i++){
-    if (pg3 === secret[3]){
-        return pin1
-    }else{(pg1 === secret[i]);{
-        return pin2
-    }
-        
-    }
-}
+    
+       for (i = 0; i < secret.length; i++){
+        if (userGuess[2].color === secret[2]){
+           // return pin1
+           console.log("match at index 2")
+        }else if(userGuess[2].color === secret[i]){
+           // return pin2
+           console.log("correct color at index 2")
+        } else {console.log("no match")}
+       }
+
+       for (i = 0; i < secret.length; i++){
+        if (userGuess[3].color === secret[3]){
+           // return pin1
+           console.log("match at index 3")
+        }else if(userGuess[3].color === secret[i]){
+           // return pin2
+           console.log("correct color at index 3")
+        } else {console.log("no match")}
+       }
 }
 
 document.getElementById('check').addEventListener('click', function() {
